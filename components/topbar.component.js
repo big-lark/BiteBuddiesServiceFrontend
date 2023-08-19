@@ -39,6 +39,7 @@ export const logo = async () => {
     className: "logo",
     elementType: "img",
   });
+  logo.setAttribute("src", "./src/topbar_logo.svg");
   logo.setAttribute("alt", "logo");
   return logo;
 };
@@ -48,7 +49,7 @@ export const addtionalMenu = async () => {
     className: "menu",
     elementType: "img",
   });
-  menu.setAttribute("src", "./src/topbar_menu.svg");
+  menu.setAttribute("src", "./src/topbar_filter.svg");
   menu.setAttribute("alt", "menu");
   return menu;
 };

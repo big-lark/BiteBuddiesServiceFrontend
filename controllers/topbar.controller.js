@@ -1,5 +1,6 @@
+// import { fadeLeft } from "../animate/animate.js";
 import * as topbarComponent from "../components/topbar.component.js";
-import { renderMainMenu } from "../views/mainMenu.view.js";
+import { renderTodos } from "../views/todos.view.js";
 
 export const section = async () => {
   const section = await topbarComponent.sectionComponent();
@@ -33,9 +34,10 @@ export const topbarBackArrow = async () => {
   // if (history.state.v1 == "bitebuddies") {
   // backArrow.setAttribute("style", "display:none");
   // }
+  // fadeLeft(backArrow);
   backArrow.addEventListener("click", () => {
     history.back();
-    renderMainMenu();
+    renderTodos();
   });
   return backArrow;
 };

@@ -8,6 +8,14 @@ export const restaurantManuTitle = async (text) => {
   });
   return restaurantManuTitle;
 };
+export const restaurantManuSubTitle = async (text) => {
+  const restaurantManuTitle = await element({
+    className: "restaurantMenuSubTitle",
+    elementType: "p",
+    text: text,
+  });
+  return restaurantManuTitle;
+};
 
 export const restaurantCardBox = async () => {
   const restaurantCardBox = await element({

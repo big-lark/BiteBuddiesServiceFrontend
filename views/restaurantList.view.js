@@ -1,22 +1,26 @@
+import { keyframesLeft, options } from "../animate/animate.js";
 import * as restaurantCardBoxController from "../controllers/restaurantList.controller.js";
 
 export const renderRestaurantList = async () => {
-  history.pushState({ v1: "bitebuddies/coffee" }, "", "bitebuddies/coffee");
+  // history.pushState({ v1: "bitebuddies/coffee" }, "", "bitebuddies/coffee");
   const section = document.querySelector(".section-body");
   section.innerHTML = "";
   const target = document.querySelector(".back-arrow");
   target.setAttribute("style", "display:block;");
 
-  const restaurantMenu =
+  const restaurantMenuTitle =
     await restaurantCardBoxController.restaurantMenuTitle();
+
+  const restaurantMenuSubTitle =
+    await restaurantCardBoxController.restaurantManuSubTitle();
 
   const restaurantCardBox =
     await restaurantCardBoxController.restaurantCardBox();
 
-  // const restaurantCard = await restaurantCardBoxController.restaurantCard();
-
-  // restaurantTextWrapper.append(restaurantName, restaurantDesc);
-  // restaurantCard.append(restaurantImage, restaurantTextWrapper);
-  // restaurantCardBox.append(restaurantCard);
-  section.append(restaurantMenu, restaurantCardBox);
+  // section.animate(keyframesLeft, options);
+  section.append(
+    restaurantMenuTitle,
+    restaurantMenuSubTitle,
+    restaurantCardBox
+  );
 };

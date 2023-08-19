@@ -1,8 +1,15 @@
 import * as restaurantList from "../components/restaurantList.component.js";
 
 export const restaurantMenuTitle = () => {
-  const title = restaurantList.restaurantManuTitle("Coffee Shop List");
+  const title = restaurantList.restaurantManuTitle("Restaurants");
   return title;
+};
+
+export const restaurantManuSubTitle = () => {
+  const subTitle = restaurantList.restaurantManuSubTitle(
+    "See the top restaurants and discounts near you"
+  );
+  return subTitle;
 };
 
 export const restaurantCardBox = async () => {
@@ -18,6 +25,8 @@ export const restaurantCard = async () => {
 
   const Image = await restaurantImage();
   const TextWrapper = await restaurantTextWrapper();
+  // const name = await restaurantName();
+  // const desc = await restaurantDesc();
 
   restaurantCard.append(Image, TextWrapper);
   // const fragment = document.createDocumentFragment()
@@ -37,12 +46,12 @@ export const restaurantTextWrapper = async () => {
 };
 
 export const restaurantName = async () => {
-  const name = "chakan jipbsp";
+  const name = "X";
   const restaurantName = await restaurantList.restaurantName(name);
   return restaurantName;
 };
 export const restaurantDesc = async () => {
-  const desc = "Near busan sation! 5min";
+  const desc = "🤍";
   const restaurantDesc = await restaurantList.restaurantDesc(desc);
   return restaurantDesc;
 };

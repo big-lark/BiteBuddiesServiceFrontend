@@ -1,4 +1,4 @@
-import * as mainMenuComponent from "../components/mainMenu.component.js";
+import * as mainMenuComponent from "../components/todos.component.js";
 import { renderRestaurantList } from "../views/restaurantList.view.js";
 
 // export const section = async () => {
@@ -22,24 +22,25 @@ export const firstManuBtn = async () => {
   const className = "firstManuBtn";
   const button = await mainMenuComponent.buttonComponent(
     className,
-    "Get Coffee?"
+    "Find someone to eat with"
+  );
+
+  return button;
+};
+export const secondManuBtn = async () => {
+  const className = "Find a restaurant";
+  const button = await mainMenuComponent.buttonComponent(
+    className,
+    "Find a restaurant"
   );
   button.addEventListener("click", renderRestaurantList);
   return button;
 };
-export const secondManuBtn = async () => {
-  const className = "secondManuBtn";
-  const button = await mainMenuComponent.buttonComponent(
-    className,
-    "Find Buddies"
-  );
-  return button;
-};
 export const thirdManuBtn = async () => {
-  const className = "thirdManuBtn";
+  const className = "Suprise Me!";
   const button = await mainMenuComponent.buttonComponent(
     className,
-    "Surprise Me"
+    "Suprise Me!"
   );
   return button;
 };
