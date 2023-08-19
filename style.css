@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 440px;
+  margin: auto;
+  width: 380px;
+  height: 100vh;
+  /* border: 1px solid black; */
+}
+
+.topbar-box {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 20px;
+  height: 20px;
+}
+.back-arrow,
+.logo,
+.menu {
+  width: 20px;
+  height: 20px;
+}
+
+.menu {
+  display: none;
+}
+.section .title {
+  /* border: 1px solid black; */
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.button-wrapper {
+  /* border: 1px solid yellow; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-wrapper button {
+  margin: 10px;
+  padding: 10px 0;
+  width: 330px;
+  border-radius: 10px;
+  background: lightgray;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover {
+  color: white;
+  background-color: blue;
+}
+
+.restaurant-menu-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.restaurant-card-box {
+  padding: 20px;
+}
+
+.restaurant-card {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 330px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  background: lightgray;
+  outline: none;
+  border: none;
+}
+.restaurant-card:hover {
+  color: white;
+  background: blue;
+}
+
+.restaurant-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.restaurant-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.restaurant-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+restaurant-desc {
+  font-size: 16px;
+}
