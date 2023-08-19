@@ -14,6 +14,6 @@ root.append(topbar);
 // history.pushState({}, { v1: "bitebuddies" }, "bitebuddies");
 // console.log(history.state.v1);
 
-// await renderOnboardingPage();
+await renderOnboardingPage();
 
-await renderMainAppView();
+// await renderMainAppView();
