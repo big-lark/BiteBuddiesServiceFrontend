@@ -16,23 +16,23 @@ export const subTitle = async () => {
 
 export const buttonWrapper = async () => {
   const eAndIwrapper = await registComponent.buttonWapper();
-  const extroverted = await button("select-btn", "extroverted");
-  const introverted = await button("select-btn", "introverted");
+  const extroverted = await button("select-btn", "Extrovert");
+  const introverted = await button("select-btn", "Introvert");
   eAndIwrapper.append(extroverted, introverted);
   //
   const sAndNwrapper = await registComponent.buttonWapper();
-  const sensing = await button("select-btn", "sensing");
-  const intuitive = await button("select-btn", "intuitive");
+  const sensing = await button("select-btn", "Sensing");
+  const intuitive = await button("select-btn", "iNtuition");
   sAndNwrapper.append(sensing, intuitive);
   //
   const tAndFwrapper = await registComponent.buttonWapper();
-  const thinking = await button("select-btn", "extroverted");
-  const feeling = await button("select-btn", "introverted");
+  const thinking = await button("select-btn", "Thinking");
+  const feeling = await button("select-btn", "Feeling");
   tAndFwrapper.append(thinking, feeling);
   //
   const jAndPwrapper = await registComponent.buttonWapper();
-  const judging = await button("select-btn", "extroverted");
-  const perceiving = await button("select-btn", "introverted");
+  const judging = await button("select-btn", "Judging");
+  const perceiving = await button("select-btn", "Perceiving");
   jAndPwrapper.append(judging, perceiving);
 
   const fragment = document.createDocumentFragment();
@@ -55,6 +55,9 @@ export const ctaBtn = async () => {
   buttonWrapper.append(button);
   buttonWrapper.addEventListener("click", async () => {
     const mbti = document.querySelectorAll(".selected");
+    if (mbti.length < 4) {
+      return;
+    }
     const mbtiText = [];
     mbti.forEach((e) => {
       mbtiText.push(e.innerText);

@@ -1,4 +1,5 @@
 import * as mainMenuComponent from "../components/todos.component.js";
+import { renderOnboardingFriends } from "../views/onboarding-friend.view.js";
 import { renderRestaurantList } from "../views/restaurantList.view.js";
 
 // export const section = async () => {
@@ -24,7 +25,7 @@ export const firstManuBtn = async () => {
     className,
     "Find someone to eat with"
   );
-
+  button.addEventListener("click", renderOnboardingFriends);
   return button;
 };
 export const secondManuBtn = async () => {

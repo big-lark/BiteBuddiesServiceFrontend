@@ -1,12 +1,12 @@
+// import { bottomBarWrapper } from "../components/app/bottom.component.js";
+
+import { bottomBarWrapper } from "../controllers/app/bottom.controller.js";
 import { seciotnBody, section } from "../controllers/topbar.controller.js";
 
 export const layoutTopbarController = async () => {
   const layoutSection = await section();
   const layoutbody = await seciotnBody();
-  layoutSection.append(layoutbody);
+  const layoutBottom = await bottomBarWrapper();
+  layoutSection.append(layoutbody, layoutBottom);
   return layoutSection;
 };
-// export const layoutBodyController = async () => {
-//   const layoutbody = await seciotnBody();
-//   return layoutbody;
-// };

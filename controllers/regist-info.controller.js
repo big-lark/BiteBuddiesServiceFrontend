@@ -36,6 +36,10 @@ export const ctaBtn = async () => {
   buttonWrapper.append(button);
   buttonWrapper.addEventListener("click", async () => {
     const mf = document.querySelector(".selected").innerText;
+    console.log(mf);
+    if (mf.length < 1) {
+      return;
+    }
     localStorage.setItem("regist-info", JSON.stringify({ mf }));
     await renderRegistMbtiView();
   });

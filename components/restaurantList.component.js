@@ -37,7 +37,7 @@ export const restaurantImage = async () => {
     elementType: "img",
   });
   restaurantImage.setAttribute("alt", "restaurantImage");
-  restaurantImage.setAttribute("src", "../src/coffeeshop.png");
+  restaurantImage.setAttribute("src", "../src/coffeeshop.jpg");
 
   return restaurantImage;
 };

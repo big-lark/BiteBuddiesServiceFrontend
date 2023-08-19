@@ -46,6 +46,9 @@ export const ctaBtn = async () => {
   buttonWrapper.append(button);
   buttonWrapper.addEventListener("click", async () => {
     const perferences = document.querySelectorAll(".selected");
+    if (perferences.length < 1) {
+      return;
+    }
     const perferencesText = [];
     perferences.forEach((e) => {
       perferencesText.push(e.innerText);
