@@ -1,8 +1,8 @@
-import { keyframesLeft, options } from "../animate/animate.js";
+import { keyframesUp, options } from "../animate/animate.js";
 import * as restaurantCardBoxController from "../controllers/restaurantList.controller.js";
 
 export const renderRestaurantList = async () => {
-  // history.pushState({ v1: "bitebuddies/coffee" }, "", "bitebuddies/coffee");
+  history.pushState({ v1: "restaurantList" }, "", "restaurantList");
   const section = document.querySelector(".section-body");
   section.innerHTML = "";
   const target = document.querySelector(".back-arrow");
@@ -17,7 +17,7 @@ export const renderRestaurantList = async () => {
   const restaurantCardBox =
     await restaurantCardBoxController.restaurantCardBox();
 
-  // section.animate(keyframesLeft, options);
+  section.animate(keyframesUp, options);
   section.append(
     restaurantMenuTitle,
     restaurantMenuSubTitle,

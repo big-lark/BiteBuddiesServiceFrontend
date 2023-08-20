@@ -1,6 +1,6 @@
 // import { fadeLeft } from "../animate/animate.js";
 import * as topbarComponent from "../components/topbar.component.js";
-import { renderTodos } from "../views/todos.view.js";
+import { renderOnboardingPage } from "../views/onboarding.view.js";
 
 export const section = async () => {
   const section = await topbarComponent.sectionComponent();
@@ -30,14 +30,11 @@ export const imgWrapper = async (img) => {
 
 export const topbarBackArrow = async () => {
   const backArrow = await topbarComponent.backArrow();
-  // console.log(history.state.v1);
-  // if (history.state.v1 == "bitebuddies") {
-  // backArrow.setAttribute("style", "display:none");
-  // }
-  // fadeLeft(backArrow);
-  backArrow.addEventListener("click", () => {
-    history.back();
-    renderTodos();
+
+  backArrow.addEventListener("click", async () => {
+    // history.go(-1);
+    // await renderOnboardingPage();
+    window.location.href = "http://127.0.0.1:5500/";
   });
   return backArrow;
 };

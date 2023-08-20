@@ -30,8 +30,10 @@ export const articleSubTitle = async () => {
 
 export const articleNavigatorWrapper = async () => {
   const navigatorWrapper = await onboardingComponent.articleNavigatorWrapper();
-  const navigator = await articleNavigator();
-  navigatorWrapper.append(navigator);
+  const navigatorOne = await articleNavigator();
+  const navigatorTwo = await articleNavigator();
+  const navigatorThree = await articleNavigator();
+  navigatorWrapper.append(navigatorOne, navigatorTwo, navigatorThree);
   return navigatorWrapper;
 };
 export const articleNavigator = async () => {

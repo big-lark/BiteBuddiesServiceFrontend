@@ -1,8 +1,8 @@
-import { keyframesLeft, options } from "../animate/animate.js";
+import { keyframesUp, options } from "../animate/animate.js";
 import * as mainMenuController from "../controllers/todos.controller.js";
 
 export const renderTodos = async () => {
-  // history.pushState({ v1: "bitebuddies" }, "", "bitebuddies");
+  history.pushState({ v1: "todos" }, "", "todos");
 
   const section = document.querySelector(".section-body");
   section.innerHTML = "";
@@ -18,6 +18,6 @@ export const renderTodos = async () => {
 
   buttonWrapper.append(firstManuBtn, SecondManuBtn, ThirdManuBtn);
 
-  // section.animate(keyframesLeft, options);
+  section.animate(keyframesUp, options);
   section.append(title, buttonWrapper);
 };

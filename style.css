@@ -93,7 +93,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  flex: 1 0 auto;
+  flex: 1 0 0;
 }
 
 /* .button-wrapper button:hover {
@@ -219,12 +219,21 @@ body {
   align-items: center;
 }
 
-.onboarding-article-navigator {
+.onboarding-article-navigator:nth-child(even) {
   padding: 4px;
   background: #2586d5;
   border-radius: 10px;
   border: none;
   margin: 30px 0;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.onboarding-article-navigator:nth-child(odd) {
+  padding: 4px;
+  margin: 10px;
+  background: gray;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
 }
 .onboarding-cta-button {

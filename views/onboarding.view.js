@@ -3,6 +3,7 @@ import * as onboardingController from "../controllers/onboarding.controller.js";
 import { renderCustomerInfo } from "./regist-info.view.js";
 
 export const renderOnboardingPage = async () => {
+  history.pushState({ v1: "onboarding" }, "", "onboarding");
   const target = document.querySelector(".section-body");
   target.innerHTML = "";
   document.querySelector(".topbar-box").setAttribute("style", "display:none");
@@ -17,6 +18,6 @@ export const renderOnboardingPage = async () => {
   const ctaBtn = await onboardingController.ctaButton();
   ctaBtn.addEventListener("click", renderCustomerInfo);
 
-  // target.animate(keyframesUp, options);
+  target.animate(keyframesUp, options);
   target.append(article, title, subTitle, navigator, ctaBtn);
 };
