@@ -1,3 +1,4 @@
+import { getRandomUser } from "../../apis/getRandomuser.js";
 import * as mainComponent from "../../components/app/main.component.js";
 
 export const friendsCardWrapper = async () => {
@@ -9,8 +10,10 @@ export const friendsCardWrapper = async () => {
 };
 
 export const friendsCard = async () => {
+  const result = await getRandomUser();
+  // console.log(result.results[0].picture.thumbnail);
   const card = await mainComponent.friendsCard();
-  card.setAttribute("src", "../../src/coffeeshop.jpg");
+  card.setAttribute("src", result.results[0].picture.large);
 
   return card;
 };
@@ -24,7 +27,7 @@ export const firendsTextWrapper = async () => {
 };
 
 export const friendsNameAndAge = async () => {
-  const nameAndAge = await mainComponent.friendsNameAndAge("giwon Jang, 27");
+  const nameAndAge = await mainComponent.friendsNameAndAge("Giwon Jang, 27");
   return nameAndAge;
 };
 

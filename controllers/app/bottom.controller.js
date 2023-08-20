@@ -34,7 +34,7 @@ export const bottomBarButtonWrapper = async () => {
 
 export const bottomBarButton = async (img) => {
   const image = await bottomBarButtonComponent.bottomBarButton();
-  image.setAttribute("src", `../src/${img}.svg`);
+  image.setAttribute("src", `./src/${img}.svg`);
   image.setAttribute("alt", img);
   return image;
 };

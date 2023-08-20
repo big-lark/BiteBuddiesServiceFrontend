@@ -6,7 +6,8 @@ export const renderOnboardingPage = async () => {
   history.pushState({ v1: "onboarding" }, "", "onboarding");
   const target = document.querySelector(".section-body");
   target.innerHTML = "";
-  document.querySelector(".topbar-box").setAttribute("style", "display:none");
+  const bottombar = document.querySelector(".bottom-bar-wrapper");
+  bottombar.setAttribute("style", "display:none");
 
   const article = await onboardingController.articleWrapper();
 

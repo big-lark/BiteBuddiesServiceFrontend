@@ -6,6 +6,9 @@ export const renderTodos = async () => {
 
   const section = document.querySelector(".section-body");
   section.innerHTML = "";
+  document
+    .querySelector(".bottom-bar-wrapper")
+    .setAttribute("style", "display : none ;");
   // const target = document.querySelector(".back-arrow");
   // target.setAttribute("style", "display:none;");
 
