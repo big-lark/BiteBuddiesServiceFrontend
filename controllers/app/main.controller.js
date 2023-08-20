@@ -11,9 +11,9 @@ export const friendsCardWrapper = async () => {
 
 export const friendsCard = async () => {
   const result = await getRandomUser();
-  // console.log(result.results[0].picture.thumbnail);
   const card = await mainComponent.friendsCard();
-  card.setAttribute("src", result.results[0].picture.large);
+  card.setAttribute("src", result?.results[0].picture.large);
+  card.setAttribute("alt", "users");
 
   return card;
 };

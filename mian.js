@@ -6,4 +6,6 @@ const root = document.querySelector("#root");
 const topbar = await layoutController();
 root.append(topbar);
 
+console.log("?");
+
 await renderOnboardingPage();
