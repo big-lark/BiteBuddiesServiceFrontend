@@ -1,4 +1,3 @@
-import { getRandomUser } from "../../apis/getRandomuser.js";
 import * as mainComponent from "../../components/app/main.component.js";
 
 export const friendsCardWrapper = async () => {
