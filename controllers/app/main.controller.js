@@ -9,12 +9,12 @@ export const friendsCardWrapper = async () => {
 };
 
 export const friendsCard = async () => {
-  const result = await fetch("https://randomuser.me/api/", {
-    headers: { Accept: "application/json", "Content-Type": "application/json" },
-    method: "GET",
-  }).then((e) => e.json());
+  // const result = await fetch("https://randomuser.me/api/", {
+  //   headers: { Accept: "application/json", "Content-Type": "application/json" },
+  //   method: "GET",
+  // }).then((e) => e.json());
   const card = await mainComponent.friendsCard();
-  card.setAttribute("src", result?.results[0].picture.large);
+  card.setAttribute("src", "./src/user.jpg");
   card.setAttribute("alt", "users");
 
   return card;
