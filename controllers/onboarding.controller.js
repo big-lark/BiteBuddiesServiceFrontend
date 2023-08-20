@@ -12,7 +12,7 @@ export const articleWrapper = async () => {
 };
 export const article = async (image) => {
   const article = await onboardingComponent.articleImage();
-  article.setAttribute("src", `../src/${image}.svg`);
+  article.setAttribute("src", `./src/${image}.svg`);
   return article;
 };
 export const articleTitle = async () => {
